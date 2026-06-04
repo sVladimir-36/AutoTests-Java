@@ -2,36 +2,46 @@ package org.example.lesson4;
 
 import java.util.Arrays;
 
-public class BankAccount {
-
+public class BankAccount  {
     int id;
     String name;
     double balance;
+    //метод для пополнения счета
+    double popolnenieScheta (double summaPopolnenya) {
+        double result = balance + summaPopolnenya;
+        return result;
+    }
+    //метод для снятия со счета
+    double snyatieSoScheta (double summaSnyatia) {
+        double result = balance - summaSnyatia;
+        return result;
+    }
 
     public static void main(String[] args) {
-        //Cоздаем обьект класса BankAccount, после new идет вызов конструктора
         BankAccount MyAccount = new BankAccount();
         BankAccount YourAccount = new BankAccount();
         BankAccount HisAccount = new BankAccount();
 
-        //Задаем параметры обьектов
         MyAccount.id = 1;
-        MyAccount.name = "Вова";
-        MyAccount.balance = 50.0;
+        MyAccount.name = "Vovan";
+        MyAccount.balance = 15.55;
 
         YourAccount.id = 2;
-        YourAccount.name = "Дима";
-        YourAccount.balance = 150.0;
+        YourAccount.name = "Tania";
+        YourAccount.balance = 188.55;
 
         HisAccount.id = 3;
-        HisAccount.name = "Олег";
-        HisAccount.balance = 55.00;
+        HisAccount.name = "Bell";
+        HisAccount.balance = 8.44;
 
-        //Выводим в консоль
-        System.out.println(MyAccount.id);
-
-
+        System.out.println(MyAccount.name);
+//вызов метода для пополнения счета на указанную сумму
+        double popolnenie = MyAccount.popolnenieScheta(143);
+        System.out.println(popolnenie);
+//вызов метода для снятия со счета указанной суммы
+        double snyatie = YourAccount.snyatieSoScheta(111.45);
+        System.out.println(snyatie);
     }
-}
 
+}
 
