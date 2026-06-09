@@ -10,7 +10,7 @@ public class Employee {
         this(0, surname3, age3, 0.0, null);
     }
 
-    public Employee(int identificator, String familia, int vozrast, double zarplata, String otdel) {
+    Employee(int identificator, String familia, int vozrast, double zarplata, String otdel) {
         id = identificator;
         surname = familia;
         age = vozrast;
